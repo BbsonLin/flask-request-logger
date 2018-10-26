@@ -1,0 +1,11 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# dotenv files
+.env
+
+# Sqlite
+*.db
+
+# Visual Studio code
+.vscode
