@@ -28,5 +28,9 @@ var/
 # Sqlite
 *.db
 
+# Log file
+*.log
+*.tap
+
 # Visual Studio code
 .vscode

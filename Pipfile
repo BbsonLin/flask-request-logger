@@ -5,13 +5,12 @@ name = "pypi"
 
 [packages]
 flask = "*"
-sqlalchemy = "*"
+flask-sqlalchemy = "*"
 
 [dev-packages]
-setuptools = "*"
 "flake8" = "*"
 gunicorn = "*"
 pymysql = "*"
-
-[requires]
-python_version = "3.6"
+pytest = "*"
+python-dotenv = "*"
+pytest-tap = "*"
