@@ -1,17 +1,22 @@
-from sqlalchemy import create_engine
-from sqlalchemy.orm import scoped_session, sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
+import datetime
 
-Base = declarative_base()
+from sqlalchemy.ext.declarative import as_declarative
+
+from flask_sqlalchemy import DefaultMeta as ModelDefaultMeta
 
 
-def init_db(db_uri='sqlite:////tmp/test.db'):
-    from .models import RequestLog, ResponseLog
-    engine = create_engine(db_uri, convert_unicode=True)
-    db_session = scoped_session(sessionmaker(autocommit=False,
-                                             autoflush=False,
-                                             bind=engine))
-    Base.query = db_session.query_property()
-    Base.metadata.create_all(bind=engine)
+@as_declarative(name='Model', metaclass=ModelDefaultMeta)
+class Model(object):
+    __table_args__ = {'extend_existing': True}
 
-    return db_session
+    def to_json(self):
+        result = dict()
+        for key in self.__mapper__.c.keys():
+            col = getattr(self, key)
+            if isinstance(col, datetime.datetime) or isinstance(col, datetime.date):
+                col = col.isoformat()
+            result[key] = col
+        return result
+
+
+Base = Model

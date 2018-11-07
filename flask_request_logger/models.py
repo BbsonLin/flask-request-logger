@@ -4,7 +4,6 @@ from .database import Base
 
 
 class RequestLog(Base):
-    __tablename__ = 'request_log'
     id = Column(Integer, primary_key=True, autoincrement=True)
     method = Column(String(50))
     url = Column(String(120))
@@ -28,7 +27,6 @@ class RequestLog(Base):
 
 
 class ResponseLog(Base):
-    __tablename__ = 'response_log'
     id = Column(Integer, primary_key=True, autoincrement=True)
     status_code = Column(Integer)
     content_length = Column(Integer, nullable=True)
