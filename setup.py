@@ -24,7 +24,7 @@ setup(
     zip_safe=False,
     keywords='flask filer filesystem',
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 2 - Pre-Alpha',
         'Environment :: Web Environment',
         'Framework :: Flask',
         'Operating System :: OS Independent',
