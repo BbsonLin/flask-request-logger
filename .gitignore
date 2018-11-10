@@ -22,7 +22,10 @@ var/
 *.egg
 .pytest_cache
 
-# dotenv
+# Sphinx documentation
+docs/source/_build/
+
+# Environments
 .env
 
 # Sqlite
