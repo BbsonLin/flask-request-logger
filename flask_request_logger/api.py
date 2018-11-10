@@ -10,6 +10,11 @@ LOG.addHandler(logging.StreamHandler())
 
 
 class RequestLogAPI(MethodView):
+    """
+    Extend from class:`~flask.views.MethodView`
+
+    An API that mulipulate `request_log` table content.
+    """
 
     def get(self):
         req_logs = [req_log.to_json() for req_log in RequestLog.query.all()]
@@ -18,6 +23,11 @@ class RequestLogAPI(MethodView):
 
 
 class ResponseLogAPI(MethodView):
+    """
+    Extend from class:`~flask.views.MethodView`
+
+    An API that mulipulate `response` table content.
+    """
 
     def get(self):
         resp_logs = [resp_log.to_json() for resp_log in ResponseLog.query.all()]
