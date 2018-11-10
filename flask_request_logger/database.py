@@ -7,6 +7,11 @@ from flask_sqlalchemy import DefaultMeta as SQLModelDefaultMeta
 
 @as_declarative(name='SQLModel', metaclass=SQLModelDefaultMeta)
 class SQLModel(object):
+    """
+    Inspire by flask_builder.models
+
+    Use it and configure it just like flask_sqlalchemy
+    """
     __table_args__ = {'extend_existing': True}
 
     def to_json(self):
