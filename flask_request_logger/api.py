@@ -11,7 +11,7 @@ LOG.addHandler(logging.StreamHandler())
 
 class RequestLogAPI(MethodView):
     """
-    Extend from class:`~flask.views.MethodView`
+    Extend from :class:`flask.views.MethodView`
 
     An API that mulipulate `request_log` table content.
     """
@@ -24,7 +24,7 @@ class RequestLogAPI(MethodView):
 
 class ResponseLogAPI(MethodView):
     """
-    Extend from class:`~flask.views.MethodView`
+    Extend from :class:`flask.views.MethodView`
 
     An API that mulipulate `response` table content.
     """

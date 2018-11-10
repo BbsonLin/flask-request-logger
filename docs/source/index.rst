@@ -8,6 +8,7 @@ Contents
     :maxdepth: 1
 
     installation
+    basic_example
 
 .. toctree::
     :maxdepth: 2
