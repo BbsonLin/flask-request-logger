@@ -2,11 +2,11 @@ import datetime
 
 from sqlalchemy.ext.declarative import as_declarative
 
-from flask_sqlalchemy import DefaultMeta as ModelDefaultMeta
+from flask_sqlalchemy import DefaultMeta as SQLModelDefaultMeta
 
 
-@as_declarative(name='Model', metaclass=ModelDefaultMeta)
-class Model(object):
+@as_declarative(name='SQLModel', metaclass=SQLModelDefaultMeta)
+class SQLModel(object):
     __table_args__ = {'extend_existing': True}
 
     def to_json(self):
@@ -19,4 +19,4 @@ class Model(object):
         return result
 
 
-Base = Model
+Base = SQLModel
