@@ -8,8 +8,20 @@ Hello
 ```
 $ FLASK_APP=hello.py flask logger init_db --app=hello 
 ```
-1. Run the hello Flask app
+2. Run the hello Flask app
 ```
 $ FLASK_APP=hello.py flask run
 ```
 3. By visiting http://localhost:5000/, will log the requests/responses in request_log.db.
+
+
+Flaskr
+------
+This project is provided by [Flask's Tutorial](http://flask.pocoo.org/docs/1.0/tutorial/).
+
+```
+$ export FLASK_APP=flaskr
+$ export FLASK_ENV=development
+$ flask init-db
+$ flask run
+```

@@ -22,6 +22,10 @@ var/
 *.egg
 .pytest_cache
 
+# Flask stuff:
+instance/
+.webassets-cache
+
 # Sphinx documentation
 docs/source/_build/
 
@@ -30,6 +34,7 @@ docs/source/_build/
 
 # Sqlite
 *.db
+*.sqlite
 
 # Log file
 *.log
