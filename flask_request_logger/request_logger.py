@@ -3,7 +3,7 @@ from sqlalchemy.engine.url import make_url
 
 from .cli import logger_cli
 from .models import RequestLog, ResponseLog
-from .api import RequestLogAPI, ResponseLogAPI
+from .api import RequestLogAPI, ResponseLogAPI, LogAPI
 
 
 class RequestLogger(object):
@@ -41,6 +41,9 @@ class RequestLogger(object):
 
         resp_log_view = ResponseLogAPI.as_view('resp-log')
         app.add_url_rule('/resp-log/', view_func=resp_log_view)
+
+        log_view = LogAPI.as_view('logs')
+        app.add_url_rule('/logs/', view_func=log_view)
 
     def _create_db_session(self, app):
         from sqlalchemy import create_engine
