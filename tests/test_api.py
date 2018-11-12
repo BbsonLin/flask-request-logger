@@ -15,3 +15,11 @@ def test_resp_log(client):
 
     assert resp.status_code == 200
     assert type(resp.get_json().get('data')) is list
+
+
+@pytest.mark.last
+def test_logs(client):
+    resp = client.get('/logs/')
+
+    assert resp.status_code == 200
+    assert type(resp.get_json().get('data')) is list

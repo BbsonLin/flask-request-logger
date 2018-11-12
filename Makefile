@@ -5,3 +5,6 @@ clean-build:
 
 release:
 	python scripts/make-release.py
+
+test:
+	pytest -sv --tap-combined
