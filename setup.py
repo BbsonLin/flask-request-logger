@@ -22,7 +22,7 @@ setup(
     packages=['flask_request_logger'],
     install_requires=install_requires,
     zip_safe=False,
-    keywords='flask filer filesystem',
+    keywords='flask logger',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Environment :: Web Environment',
