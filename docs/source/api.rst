@@ -55,3 +55,5 @@ flask_request_logger.api
 .. autoclass:: RequestLogAPI
 
 .. autoclass:: ResponseLogAPI
+
+.. autoclass:: LogAPI
