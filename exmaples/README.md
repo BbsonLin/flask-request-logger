@@ -19,6 +19,11 @@ Flaskr
 ------
 This project is provided by [Flask's Tutorial](http://flask.pocoo.org/docs/1.0/tutorial/).
 
+1. Initialize your logger database
+```
+$ FLASK_APP=flaskr flask logger init_db --app=flaskr 
+```
+2. Run Flaskr app
 ```
 $ export FLASK_APP=flaskr
 $ export FLASK_ENV=development

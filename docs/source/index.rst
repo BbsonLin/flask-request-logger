@@ -9,6 +9,7 @@ Contents
 
     installation
     basic_example
+    advanced_example
 
 .. toctree::
     :maxdepth: 2
