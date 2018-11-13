@@ -2,9 +2,7 @@ import logging
 
 from flask import jsonify
 from flask.views import MethodView
-from flask_request_logger.models import RequestLog, ResponseLog
-from flask_request_logger.schemas import LogSchema
-from flask_request_logger.utils import get_logs
+from flask_request_logger.utils import get_logs, get_request_logs, get_response_logs
 
 LOG = logging.getLogger(__name__)
 LOG.setLevel(logging.DEBUG)
@@ -19,7 +17,7 @@ class RequestLogAPI(MethodView):
     """
 
     def get(self):
-        req_logs = [req_log.to_json() for req_log in RequestLog.query.all()]
+        req_logs = get_request_logs()
         LOG.debug('RequestLog.query: {}'.format(req_logs))
         return jsonify(data=req_logs)
 
@@ -32,7 +30,7 @@ class ResponseLogAPI(MethodView):
     """
 
     def get(self):
-        resp_logs = [resp_log.to_json() for resp_log in ResponseLog.query.all()]
+        resp_logs = get_response_logs()
         LOG.debug('ResponseLog.query: {}'.format(resp_logs))
         return jsonify(data=resp_logs)
 
@@ -45,6 +43,8 @@ class LogAPI(MethodView):
     """
 
     def get(self):
+        from flask_request_logger.schemas import LogSchema
+
         logs = get_logs()
         LOG.debug('Logs: {}'.format(logs))
         log_schema = LogSchema(many=True)
