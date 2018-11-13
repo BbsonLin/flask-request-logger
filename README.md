@@ -1,7 +1,7 @@
 Flask Request Logger
 ====================
 
-**Watch out!!! This module is in Development Status :: 2 - Pre-Alpha**
+**This module is in Development Status :: 3 - Alpha**
 
 Flask-Request-Logger is an extension for [Flask](http://flask.pocoo.org/) that logging requests and responses for your Flask app.
 
