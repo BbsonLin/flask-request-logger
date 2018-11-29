@@ -1,5 +1,11 @@
 Flask Request Logger
 ====================
+[![Build Status](https://img.shields.io/travis/BbsonLin/flask-request-logger.svg?style=flat-square)](https://travis-ci.org/BbsonLin/flask-request-logger)
+[![Documentation Status](https://img.shields.io/readthedocs/flask-request-logger/latest.svg?style=flat-square)](https://responder.readthedocs.io/en/latest/)
+[![image](https://img.shields.io/pypi/v/flask-request-logger.svg?style=flat-square)](https://pypi.org/project/flask-request-logger/)
+[![image](https://img.shields.io/pypi/l/flask-request-logger.svg?style=flat-square)](https://pypi.org/project/flask-request-logger/)
+[![image](https://img.shields.io/pypi/pyversions/flask-request-logger.svg?style=flat-square)](https://pypi.org/project/flask-request-logger/)
+
 
 **This module is in Development Status :: 3 - Alpha**
 
