@@ -1,0 +1,19 @@
+---
+kind: pipeline
+name: python3.5.x
+
+steps:
+- name: build
+  image: python:3.5
+  commands:
+  - pytest
+
+---
+kind: pipeline
+name: python3.6.x
+
+steps:
+- name: build
+  image: python:3.6
+  commands:
+  - pytest
