@@ -7,7 +7,7 @@ steps:
   image: python:3.5
   commands:
   - pip install pipenv --upgrade-strategy=only-if-needed
-  - pipenv install --dev
+  - pipenv install --dev --system
   - pytest
 
 ---
@@ -19,5 +19,5 @@ steps:
   image: python:3.6
   commands:
   - pip install pipenv --upgrade-strategy=only-if-needed
-  - pipenv install --dev
+  - pipenv install --dev --system
   - pytest
