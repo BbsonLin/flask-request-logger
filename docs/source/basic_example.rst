@@ -19,5 +19,5 @@ You can also check out how to run this example from `README`_.
     def hello():
         return 'hello'
 
-.. _Here: https://github.com/BbsonLin/flask-request-logger/blob/master/example/hello.py
-.. _README: https://github.com/BbsonLin/flask-request-logger/blob/master/example/README.md#hello
+.. _Here: https://github.com/BbsonLin/flask-request-logger/blob/master/examples/hello.py
+.. _README: https://github.com/BbsonLin/flask-request-logger/blob/master/examples/README.md#hello
