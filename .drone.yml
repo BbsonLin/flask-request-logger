@@ -8,6 +8,7 @@ steps:
   commands:
   - pip install pipenv --upgrade-strategy=only-if-needed
   - pipenv install --dev
+  - pipenv install pathlib2
   - pipenv run pytest
 
 ---
