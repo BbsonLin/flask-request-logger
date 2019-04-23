@@ -1,6 +1,6 @@
 Flask Request Logger
 ====================
-[![Build Status](https://cloud.drone.io/api/badges/BbsonLin/flask-request-logger/status.svg)](https://cloud.drone.io/BbsonLin/flask-request-logger)
+[![Build Status](https://img.shields.io/drone/build/BbsonLin/flask-request-logger.svg?style=flat-square)](https://cloud.drone.io/BbsonLin/flask-request-logger)
 [![Build Status](https://img.shields.io/travis/BbsonLin/flask-request-logger.svg?style=flat-square)](https://travis-ci.org/BbsonLin/flask-request-logger)
 [![Documentation Status](https://img.shields.io/readthedocs/flask-request-logger/latest.svg?style=flat-square)](https://flask-request-logger.readthedocs.io/en/latest/)
 [![image](https://img.shields.io/pypi/v/flask-request-logger.svg?style=flat-square)](https://pypi.org/project/flask-request-logger/)
