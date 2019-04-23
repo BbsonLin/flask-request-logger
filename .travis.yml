@@ -4,6 +4,8 @@ python:
   - "3.6"
   - "3.7"
 
+dist: "xenial"
+
 # command to install dependencies
 install:
   - "pip install pipenv --upgrade-strategy=only-if-needed"
