@@ -1,30 +1,39 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
 from sqlalchemy.orm import relationship, backref
 from .database import Base
-
+from datetime import datetime
 
 class RequestLog(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
+    timestamp = Column(DateTime)
     method = Column(String(50))
-    url = Column(String(120))
+    url = Column(String(255))
     content_length = Column(Integer, nullable=True)
+    remote_addr = Column(String(50))
+    user_agent = Column(String(255))
 
-    def __init__(self, method, url, content_length):
+    def __init__(self, method, url, content_length, remote_addr, user_agent):
         self.method = method
         self.url = url
-        self.content_length = content_length
+        self.content_length = content_length 
+        # Current time normalized as UTC
+        self.timestamp = datetime.utcnow()            
+        self.remote_addr = remote_addr
+        self.user_agent = user_agent.string
 
     def __repr__(self):
         return ("<{class_name}("
                 "id={self.id}, "
                 "method='{self.method}', "
                 "url='{self.url}', "
-                "content_length={self.content_length}"
+                "content_length={self.content_length}, "
+                "timestamp={self.timestamp}, "
+                "remote_addr='{self.remote_addr}', "
+                "user_agent='{self.user_agent}', "
                 ")>".format(
                     class_name=self.__class__.__name__,
                     self=self
                 ))
-
 
 class ResponseLog(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)

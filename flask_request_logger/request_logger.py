@@ -56,7 +56,7 @@ class RequestLogger(object):
         return db_session
 
     def _logging_req_resp(self, response):
-        req_log = RequestLog(request.method, request.url, request.content_length)
+        req_log = RequestLog(request.method, request.url, request.content_length, request.remote_addr, request.user_agent)
         self.db.add(req_log)
         self.db.commit()
         res_log = ResponseLog(response.status_code, response.content_length, req_log.id)
