@@ -1,7 +1,10 @@
+from datetime import datetime
+
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
 from sqlalchemy.orm import relationship, backref
+
 from .database import Base
-from datetime import datetime
+
 
 class RequestLog(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -15,9 +18,8 @@ class RequestLog(Base):
     def __init__(self, method, url, content_length, remote_addr, user_agent):
         self.method = method
         self.url = url
-        self.content_length = content_length 
-        # Current time normalized as UTC
-        self.timestamp = datetime.utcnow()            
+        self.content_length = content_length
+        self.timestamp = datetime.utcnow()  # Current time normalized as UTC         
         self.remote_addr = remote_addr
         self.user_agent = user_agent.string
 
