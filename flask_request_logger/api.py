@@ -12,7 +12,7 @@ LOG.addHandler(logging.StreamHandler())
 class RequestLogAPI(MethodView):
     """
      | Extend from :class:`flask.views.MethodView`
-     | An API that mulipulate `request_log` table content.
+     | An API that manipulates `request_log` table content.
      | This API default added rules on endpoints **/req-log/**
     """
 
@@ -25,7 +25,7 @@ class RequestLogAPI(MethodView):
 class ResponseLogAPI(MethodView):
     """
      | Extend from :class:`flask.views.MethodView`
-     | An API that mulipulate `response_log` table content.
+     | An API that manipulates `response_log` table content.
      | This API default added rules on endpoints **/resp-log/**
     """
 
