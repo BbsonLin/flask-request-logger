@@ -1,5 +1,8 @@
 Flask Request Logger
 ====================
+[![Downloads](https://static.pepy.tech/badge/flask-request-logger/month)](https://pepy.tech/project/flask-request-logger)
+[![Downloads](https://static.pepy.tech/badge/flask-request-logger)](https://pepy.tech/project/flask-request-logger)
+
 [![Build Status](https://img.shields.io/drone/build/BbsonLin/flask-request-logger.svg?style=flat-square)](https://cloud.drone.io/BbsonLin/flask-request-logger)
 [![Build Status](https://img.shields.io/travis/BbsonLin/flask-request-logger.svg?style=flat-square)](https://travis-ci.org/BbsonLin/flask-request-logger)
 [![Documentation Status](https://img.shields.io/readthedocs/flask-request-logger/latest.svg?style=flat-square)](https://flask-request-logger.readthedocs.io/en/latest/)
@@ -7,7 +10,6 @@ Flask Request Logger
 [![image](https://img.shields.io/pypi/status/flask-request-logger.svg?style=flat-square)](https://pypi.org/project/flask-request-logger/)
 [![image](https://img.shields.io/pypi/l/flask-request-logger.svg?style=flat-square)](https://pypi.org/project/flask-request-logger/)
 [![image](https://img.shields.io/pypi/pyversions/flask-request-logger.svg?style=flat-square)](https://pypi.org/project/flask-request-logger/)
-
 
 **This module is in Development Status :: 3 - Alpha**
 
